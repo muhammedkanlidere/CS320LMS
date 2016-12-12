@@ -32,7 +32,7 @@ namespace ForTesting
         {
             try
             {
-                int convertedTxtRfid = Convert.ToInt32(txtBorrowRfid.Text);
+                 int convertedTxtRfid = Convert.ToInt32(txtBorrowRfid.Text);
 
                 Book book = lms.Book.FirstOrDefault(o => o.rfid == convertedTxtRfid);
                 Student std = lms.Student.FirstOrDefault(o => o.scode == txtBorrowScode.Text);
