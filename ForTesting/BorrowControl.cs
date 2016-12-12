@@ -48,7 +48,7 @@ namespace ForTesting
                     }
 
                     var count = lms.Borrow.Count(o => o.Bookid == brw.Bookid);
-                    label7.Text = count.ToString();
+                     label7.Text = count.ToString();
 
                 }
                 else
