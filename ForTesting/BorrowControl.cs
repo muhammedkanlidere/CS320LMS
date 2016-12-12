@@ -16,7 +16,7 @@ namespace ForTesting
         LibraryEntities lms;
         public BorrowControl()
         {
-            InitializeComponent();
+             InitializeComponent();
         }
 
         private void BarrowControl_Load(object sender, EventArgs e)

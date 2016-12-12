@@ -21,16 +21,16 @@ namespace ForTesting
 
 
         LibraryEntities lms;
-        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
           
-                if (string.IsNullOrEmpty(txtSearch.Text))
+                 if (string.IsNullOrEmpty(txtSearch.Text))
                 {
                     dataGridView1.DataSource = bookBindingSource;
                 }
                 else
-                {
-                    try
+                 {
+                     try
                     {
                         var query = from o in bookBindingSource.DataSource as List<Book>
                                     where o.name.Contains(txtSearch.Text)
