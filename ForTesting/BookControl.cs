@@ -19,8 +19,8 @@ namespace ForTesting
             InitializeComponent();
         }
 
-
-        LibraryEntities lms;
+        
+        LMS lms;
          private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
           
@@ -109,6 +109,25 @@ namespace ForTesting
            
         }
 
+        private void success()
+        {
+            MessageBox.Show("Register Successful","Register",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else
+                        func(control.Controls);
+            };
+
+            func(Controls);
+
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             btnNew.Enabled = true;
@@ -116,10 +135,30 @@ namespace ForTesting
             try
             {
                 
-                bookBindingSource.EndEdit();
-                lms.SaveChangesAsync();
-                bookBindingSource.MoveLast();
-                panel.Enabled = false;
+                var count = lms.Book.Count(t => t.rfid == txtRfid.Text);
+                if (count > 0)
+                {
+                    MessageBox.Show("This book has already registered", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtRfid.Text = "";
+                }
+                else
+                {
+                    //int istock = Convert.ToInt32(txtStock.Text);
+                    //Book book = new Book() { rfid = txtRfid.Text,name = txtName.Text, author = txtAuthor.Text, shelf = txtShelf.Text,stock = istock };
+                    //lms.Book.Add(book);
+                    //success();
+
+
+                    bookBindingSource.EndEdit();
+                    lms.SaveChangesAsync();
+                    bookBindingSource.MoveLast();
+                    panel.Enabled = false;
+
+                }
+
+
+
+
 
             }
             catch (Exception ex)
@@ -133,10 +172,14 @@ namespace ForTesting
         {
             panel.Enabled = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            lms = new LibraryEntities();
+           
+            lms = new LMS();
             bookBindingSource.DataSource = lms.Book.ToList();
+            int i =Convert.ToInt32(lms.Book.Count());
+            dataGridView1.ClearSelection();
+            dataGridView1.Rows[i].Selected = true;
 
+          
         }
 
         private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
@@ -162,5 +205,11 @@ namespace ForTesting
         }
 
        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RFIDController rf = new RFIDController();
+            txtRfid.Text = rf.getUid();
+            rf.clearUid();
+        }
     }
 }

@@ -30,6 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recordDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shelfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activeStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,17 +44,12 @@
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.serialSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boorowControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recordDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shelfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activeStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -70,6 +72,50 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1190, 697);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // authorDataGridViewTextBoxColumn
+            // 
+            this.authorDataGridViewTextBoxColumn.DataPropertyName = "author";
+            this.authorDataGridViewTextBoxColumn.HeaderText = "author";
+            this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
+            this.authorDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // recordDateDataGridViewTextBoxColumn
+            // 
+            this.recordDateDataGridViewTextBoxColumn.DataPropertyName = "recordDate";
+            this.recordDateDataGridViewTextBoxColumn.HeaderText = "recordDate";
+            this.recordDateDataGridViewTextBoxColumn.Name = "recordDateDataGridViewTextBoxColumn";
+            this.recordDateDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // shelfDataGridViewTextBoxColumn
+            // 
+            this.shelfDataGridViewTextBoxColumn.DataPropertyName = "shelf";
+            this.shelfDataGridViewTextBoxColumn.HeaderText = "shelf";
+            this.shelfDataGridViewTextBoxColumn.Name = "shelfDataGridViewTextBoxColumn";
+            // 
+            // activeStockDataGridViewTextBoxColumn
+            // 
+            this.activeStockDataGridViewTextBoxColumn.DataPropertyName = "activeStock";
+            this.activeStockDataGridViewTextBoxColumn.HeaderText = "activeStock";
+            this.activeStockDataGridViewTextBoxColumn.Name = "activeStockDataGridViewTextBoxColumn";
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(ForTesting.Book);
             // 
             // label1
             // 
@@ -115,7 +161,8 @@
             // 
             this.studentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentToolStripMenuItem1,
-            this.bookToolStripMenuItem});
+            this.bookToolStripMenuItem,
+            this.serialSettingsToolStripMenuItem});
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
             this.studentToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.studentToolStripMenuItem.Text = "Administration";
@@ -123,16 +170,23 @@
             // studentToolStripMenuItem1
             // 
             this.studentToolStripMenuItem1.Name = "studentToolStripMenuItem1";
-            this.studentToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
+            this.studentToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.studentToolStripMenuItem1.Text = "Student";
             this.studentToolStripMenuItem1.Click += new System.EventHandler(this.studentToolStripMenuItem1_Click);
             // 
             // bookToolStripMenuItem
             // 
             this.bookToolStripMenuItem.Name = "bookToolStripMenuItem";
-            this.bookToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.bookToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bookToolStripMenuItem.Text = "Book";
             this.bookToolStripMenuItem.Click += new System.EventHandler(this.bookToolStripMenuItem_Click);
+            // 
+            // serialSettingsToolStripMenuItem
+            // 
+            this.serialSettingsToolStripMenuItem.Name = "serialSettingsToolStripMenuItem";
+            this.serialSettingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.serialSettingsToolStripMenuItem.Text = "SerialSettings";
+            this.serialSettingsToolStripMenuItem.Click += new System.EventHandler(this.serialSettingsToolStripMenuItem_Click);
             // 
             // boorowControlToolStripMenuItem
             // 
@@ -141,55 +195,22 @@
             this.boorowControlToolStripMenuItem.Text = "BoorowControl";
             this.boorowControlToolStripMenuItem.Click += new System.EventHandler(this.boorowControlToolStripMenuItem_Click);
             // 
-            // bookBindingSource
+            // button1
             // 
-            this.bookBindingSource.DataSource = typeof(ForTesting.Book);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // authorDataGridViewTextBoxColumn
-            // 
-            this.authorDataGridViewTextBoxColumn.DataPropertyName = "author";
-            this.authorDataGridViewTextBoxColumn.HeaderText = "author";
-            this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
-            this.authorDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            this.categoryDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // recordDateDataGridViewTextBoxColumn
-            // 
-            this.recordDateDataGridViewTextBoxColumn.DataPropertyName = "recordDate";
-            this.recordDateDataGridViewTextBoxColumn.HeaderText = "recordDate";
-            this.recordDateDataGridViewTextBoxColumn.Name = "recordDateDataGridViewTextBoxColumn";
-            this.recordDateDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // shelfDataGridViewTextBoxColumn
-            // 
-            this.shelfDataGridViewTextBoxColumn.DataPropertyName = "shelf";
-            this.shelfDataGridViewTextBoxColumn.HeaderText = "shelf";
-            this.shelfDataGridViewTextBoxColumn.Name = "shelfDataGridViewTextBoxColumn";
-            // 
-            // activeStockDataGridViewTextBoxColumn
-            // 
-            this.activeStockDataGridViewTextBoxColumn.DataPropertyName = "activeStock";
-            this.activeStockDataGridViewTextBoxColumn.HeaderText = "activeStock";
-            this.activeStockDataGridViewTextBoxColumn.Name = "activeStockDataGridViewTextBoxColumn";
+            this.button1.Location = new System.Drawing.Point(11, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 40);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1202, 801);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
@@ -203,9 +224,9 @@
             this.Text = "Library Management System";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,6 +249,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn recordDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn shelfDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn activeStockDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripMenuItem serialSettingsToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 

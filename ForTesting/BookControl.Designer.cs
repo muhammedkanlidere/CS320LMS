@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panel = new System.Windows.Forms.Panel();
             this.txtStock = new System.Windows.Forms.TextBox();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.txtShelf = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,7 +43,15 @@
             this.txtRfid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.rfidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,21 +61,15 @@
             this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activeStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.borrowDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.button1);
             this.panel.Controls.Add(this.txtStock);
             this.panel.Controls.Add(this.label6);
             this.panel.Controls.Add(this.txtShelf);
@@ -94,10 +95,6 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(583, 26);
             this.txtStock.TabIndex = 5;
-            // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataSource = typeof(ForTesting.Book);
             // 
             // label6
             // 
@@ -210,7 +207,6 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
             this.rfidDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.authorDataGridViewTextBoxColumn,
@@ -227,67 +223,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1000, 321);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // rfidDataGridViewTextBoxColumn
-            // 
-            this.rfidDataGridViewTextBoxColumn.DataPropertyName = "rfid";
-            this.rfidDataGridViewTextBoxColumn.HeaderText = "rfid";
-            this.rfidDataGridViewTextBoxColumn.Name = "rfidDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // authorDataGridViewTextBoxColumn
-            // 
-            this.authorDataGridViewTextBoxColumn.DataPropertyName = "author";
-            this.authorDataGridViewTextBoxColumn.HeaderText = "author";
-            this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            // 
-            // recordDateDataGridViewTextBoxColumn
-            // 
-            this.recordDateDataGridViewTextBoxColumn.DataPropertyName = "recordDate";
-            this.recordDateDataGridViewTextBoxColumn.HeaderText = "recordDate";
-            this.recordDateDataGridViewTextBoxColumn.Name = "recordDateDataGridViewTextBoxColumn";
-            // 
-            // shelfDataGridViewTextBoxColumn
-            // 
-            this.shelfDataGridViewTextBoxColumn.DataPropertyName = "shelf";
-            this.shelfDataGridViewTextBoxColumn.HeaderText = "shelf";
-            this.shelfDataGridViewTextBoxColumn.Name = "shelfDataGridViewTextBoxColumn";
-            // 
-            // stockDataGridViewTextBoxColumn
-            // 
-            this.stockDataGridViewTextBoxColumn.DataPropertyName = "stock";
-            this.stockDataGridViewTextBoxColumn.HeaderText = "stock";
-            this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
-            // 
-            // activeStockDataGridViewTextBoxColumn
-            // 
-            this.activeStockDataGridViewTextBoxColumn.DataPropertyName = "activeStock";
-            this.activeStockDataGridViewTextBoxColumn.HeaderText = "activeStock";
-            this.activeStockDataGridViewTextBoxColumn.Name = "activeStockDataGridViewTextBoxColumn";
-            // 
-            // borrowDataGridViewTextBoxColumn
-            // 
-            this.borrowDataGridViewTextBoxColumn.DataPropertyName = "Borrow";
-            this.borrowDataGridViewTextBoxColumn.HeaderText = "Borrow";
-            this.borrowDataGridViewTextBoxColumn.Name = "borrowDataGridViewTextBoxColumn";
             // 
             // btnNew
             // 
@@ -380,11 +315,84 @@
             this.label8.Text = "Please press the save button to complete your transaction...";
             this.label8.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleTurquoise;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Turquoise;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Minion Pro SmBd", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(781, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 41);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "GetUid";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // rfidDataGridViewTextBoxColumn
+            // 
+            this.rfidDataGridViewTextBoxColumn.DataPropertyName = "rfid";
+            this.rfidDataGridViewTextBoxColumn.HeaderText = "rfid";
+            this.rfidDataGridViewTextBoxColumn.Name = "rfidDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // authorDataGridViewTextBoxColumn
+            // 
+            this.authorDataGridViewTextBoxColumn.DataPropertyName = "author";
+            this.authorDataGridViewTextBoxColumn.HeaderText = "author";
+            this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            // 
+            // recordDateDataGridViewTextBoxColumn
+            // 
+            this.recordDateDataGridViewTextBoxColumn.DataPropertyName = "recordDate";
+            this.recordDateDataGridViewTextBoxColumn.HeaderText = "recordDate";
+            this.recordDateDataGridViewTextBoxColumn.Name = "recordDateDataGridViewTextBoxColumn";
+            // 
+            // shelfDataGridViewTextBoxColumn
+            // 
+            this.shelfDataGridViewTextBoxColumn.DataPropertyName = "shelf";
+            this.shelfDataGridViewTextBoxColumn.HeaderText = "shelf";
+            this.shelfDataGridViewTextBoxColumn.Name = "shelfDataGridViewTextBoxColumn";
+            // 
+            // stockDataGridViewTextBoxColumn
+            // 
+            this.stockDataGridViewTextBoxColumn.DataPropertyName = "stock";
+            this.stockDataGridViewTextBoxColumn.HeaderText = "stock";
+            this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
+            // 
+            // activeStockDataGridViewTextBoxColumn
+            // 
+            this.activeStockDataGridViewTextBoxColumn.DataPropertyName = "activeStock";
+            this.activeStockDataGridViewTextBoxColumn.HeaderText = "activeStock";
+            this.activeStockDataGridViewTextBoxColumn.Name = "activeStockDataGridViewTextBoxColumn";
+            // 
+            // borrowDataGridViewTextBoxColumn
+            // 
+            this.borrowDataGridViewTextBoxColumn.DataPropertyName = "Borrow";
+            this.borrowDataGridViewTextBoxColumn.HeaderText = "Borrow";
+            this.borrowDataGridViewTextBoxColumn.Name = "borrowDataGridViewTextBoxColumn";
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(ForTesting.Book);
+            // 
             // BookControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 701);
+            this.ClientSize = new System.Drawing.Size(1024, 709);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
@@ -404,8 +412,8 @@
             this.Load += new System.EventHandler(this.BookControl_Load);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,7 +441,9 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bookBindingSource;
+        private System.Windows.Forms.Label label8;
+        private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.DataGridViewTextBoxColumn rfidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
@@ -443,8 +453,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn activeStockDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn borrowDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource bookBindingSource;
-        private System.Windows.Forms.Label label8;
-        private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.Button button1;
     }
 }

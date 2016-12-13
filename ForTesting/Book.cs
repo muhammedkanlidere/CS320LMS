@@ -21,7 +21,7 @@ namespace ForTesting
         }
     
         public int id { get; set; }
-        public Nullable<long> rfid { get; set; }
+        public string rfid { get; set; }
         public string name { get; set; }
         public string author { get; set; }
         public string category { get; set; }

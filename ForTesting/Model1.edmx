@@ -10,7 +10,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="rfid" Type="bigint" />
+          <Property Name="rfid" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="author" Type="nvarchar" MaxLength="150" />
           <Property Name="category" Type="nvarchar" MaxLength="150" />
@@ -112,7 +112,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="rfid" Type="Int64" />
+          <Property Name="rfid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="author" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="category" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
@@ -193,7 +193,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="LibraryEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="LMS" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Book" EntityType="Self.Book" />
           <EntitySet Name="Borrow" EntityType="Self.Borrow" />
           <EntitySet Name="Personel" EntityType="Self.Personel" />
@@ -213,7 +213,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="lmsModelStoreContainer" CdmEntityContainer="LibraryEntities">
+        <EntityContainerMapping StorageEntityContainer="lmsModelStoreContainer" CdmEntityContainer="LMS">
           <EntitySetMapping Name="Book">
             <EntityTypeMapping TypeName="lmsModel.Book">
               <MappingFragment StoreEntitySet="Book">

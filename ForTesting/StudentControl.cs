@@ -14,7 +14,7 @@ namespace ForTesting
 {
     public partial class StudentControl : Form
     {
-        LibraryEntities lms;
+        LMS lms;
         public StudentControl()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace ForTesting
 
         private void StudentControl_Load(object sender, EventArgs e)
         {
-            lms = new LibraryEntities();
+            lms = new LMS();
             panel.Enabled = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             studentBindingSource.DataSource = lms.Student.ToList();

@@ -12,7 +12,7 @@ namespace ForTesting
 {
     public partial class Form1 : Form
     {
-        LibraryEntities lms;
+        LMS lms;
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace ForTesting
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lms = new LibraryEntities();
+            lms = new LMS();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             bookBindingSource.DataSource = lms.Book.ToList();
 
@@ -81,6 +81,17 @@ namespace ForTesting
             {
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void serialSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RFIDController rf = new RFIDController();
+            rf.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bookBindingSource.DataSource = lms.Book.ToList();
         }
     }
 }
