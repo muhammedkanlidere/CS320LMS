@@ -152,6 +152,7 @@ namespace ForTesting
                     bookBindingSource.EndEdit();
                     lms.SaveChangesAsync();
                     bookBindingSource.MoveLast();
+                    MessageBox.Show("Transaction Complete ", "Register", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     panel.Enabled = false;
 
                 }

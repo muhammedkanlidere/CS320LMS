@@ -148,22 +148,31 @@ namespace ForTesting
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            int borrowId = Convert.ToInt32(txtBarrowId.Text);
-            var borrow = lms.Borrow.FirstOrDefault(t => t.id == borrowId);
-            if (borrow.dateOfReturn == null )
+            try
             {
-                borrow.Money = Convert.ToInt32(txtMoney.Text);
-                borrow.dateOfReturn = DateTime.Now;
-                var book = lms.Book.FirstOrDefault(o => o.id == borrow.Bookid);
-                book.activeStock++;
-                lms.SaveChanges();
-                MessageBox.Show("Book Returned");
-                getBorrowList();
-            }
-            else
+                int borrowId = Convert.ToInt32(txtBarrowId.Text);
+                var borrow = lms.Borrow.FirstOrDefault(t => t.id == borrowId);
+                if (borrow.dateOfReturn == null)
+                {
+                    string money = txtMoney.Text.Replace("₺", string.Empty);
+                    borrow.Money = Convert.ToInt32(money);
+                    borrow.dateOfReturn = DateTime.Now;
+                    var book = lms.Book.FirstOrDefault(o => o.id == borrow.Bookid);
+                    book.activeStock++;
+                    lms.SaveChanges();
+                    MessageBox.Show("Book Returned");
+                    getBorrowList();
+                }
+                else
+                {
+                    MessageBox.Show("Error This Book is already Returned", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }catch (Exception ex)
             {
-                MessageBox.Show("Error This Book is already Returned","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
+           
             
         }
 
@@ -208,6 +217,30 @@ namespace ForTesting
             Form1 frm = new Form1();
             frm.Show();
             this.Dispose();
+        }
+
+        private void BorrowControl_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void studentToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            StudentControl std = new StudentControl();
+            std.Show();
+            
+        }
+
+        private void bookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookControl book = new BookControl();
+            book.Show();
+        }
+
+        private void rfidSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RFIDController rfid = new RFIDController();
+            rfid.Show();
         }
     }
 }

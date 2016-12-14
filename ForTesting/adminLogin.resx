@@ -117,39 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>517, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAn5JREFUeF7t
-        mjFrFEEYhpcjv8BCRCwsLMTSUlJZiZWliIVYphAREREJikiQYCEpxCJYiIWksAxiIWIhKVJIiiASxFLE
-        SixFn9f5Fod1924vt5DJzPfAA9nZmbl5v2zudm9SOY7jOI7jOI4zCHeq6qD9WBYEl9dwKbQUhIW/ib/x
-        UWgtBAt/y8LLlXCmACz87Sh8OQUgqLwbBS+nAITsCp9/AQg4LrzMtwCEmxRe5lkAgsl7UdAud/DlwK6Z
-        L/A5PsNVXMFFvIAncBRWOzBM3Df8XvsVVZyzOBdWPyNMJFXlthdM2U94EXd/VTB4v4aPfYtHQ6IpYFAO
-        4Wu/43xI1gM65xS+9geeCgnHQCcZ39vnpN4kj4SkLXBS1k91ubqO/6NGvG6dcvdcSG3QIK9GHXL3A/77
-        eOTgCv6yk6V4ug5/GUsLL1frAui339Yhd7/hqP77v2GNpXmyvgpk86utElz4WwDBgczt7m+ST0J6gwa5
-        Hx57h/JVSB5Bo1yKOuXsZkjdgBOlFOFjSNwCJ+WDqHOOfg5pO6CDXI4G5OZOSDoGOo0w1yJsW8zx0DHX
-        ImxYxMnQuW8RvuDrgX1j6vu9d/geN3AT9WS3jXrdn9i2pi7XLV4/GNCnCHuyMcLryjk8jGfwPm5h2xpr
-        n4bRU8CgSUVIZmeItch51JXTttbF0HNKGKgiPIwmik1ua4w1ab164Gs+9p+3LtPD4K4rIdm9Qda20Fjr
-        cTu1O5hANm+WUi6A1N6i1qm9gtn3Em3S+LY52QII1ncI9WmxZk2zw2RS77oqQPL/JMUaH+MlOxwGJpT6
-        PmE5tKQLazyGB+xwOKwI3TsvjuM4juM4juOkQVX9ARGddE0lTX3vAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>657, 17</value>
-  </metadata>
-  <metadata name="borrowBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>189, 17</value>
-  </metadata>
-  <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="bookBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>359, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
 </root>

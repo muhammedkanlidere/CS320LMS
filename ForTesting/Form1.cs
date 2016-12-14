@@ -42,8 +42,8 @@ namespace ForTesting
 
         private void boorowControlToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BorrowControl formBorrow = new BorrowControl();
-            formBorrow.Show();
+            adminLogin login = new adminLogin();
+            login.Show();
             this.Hide();
         }
 

@@ -58,14 +58,21 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rfidSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panelBorrow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelReturn.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.borrowBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
@@ -73,6 +80,8 @@
             // 
             // panelBorrow
             // 
+            this.panelBorrow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorrow.Controls.Add(this.label2);
             this.panelBorrow.Controls.Add(this.btnBorrow);
             this.panelBorrow.Controls.Add(this.txtBorrowScode);
@@ -80,7 +89,7 @@
             this.panelBorrow.Controls.Add(this.txtBorrowRfid);
             this.panelBorrow.Controls.Add(this.label1);
             this.panelBorrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panelBorrow.Location = new System.Drawing.Point(12, 12);
+            this.panelBorrow.Location = new System.Drawing.Point(5, 29);
             this.panelBorrow.Name = "panelBorrow";
             this.panelBorrow.Size = new System.Drawing.Size(423, 250);
             this.panelBorrow.TabIndex = 1;
@@ -155,6 +164,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(26, 322);
             this.dataGridView1.Name = "dataGridView1";
@@ -165,6 +176,8 @@
             // 
             // panelReturn
             // 
+            this.panelReturn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelReturn.Controls.Add(this.txtMoney);
             this.panelReturn.Controls.Add(this.label11);
             this.panelReturn.Controls.Add(this.label10);
@@ -178,7 +191,7 @@
             this.panelReturn.Controls.Add(this.label6);
             this.panelReturn.Controls.Add(this.txtBarrowId);
             this.panelReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panelReturn.Location = new System.Drawing.Point(441, 13);
+            this.panelReturn.Location = new System.Drawing.Point(434, 30);
             this.panelReturn.Name = "panelReturn";
             this.panelReturn.Size = new System.Drawing.Size(423, 246);
             this.panelReturn.TabIndex = 4;
@@ -299,12 +312,13 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(896, 75);
+            this.button1.Location = new System.Drawing.Point(889, 92);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 38);
             this.button1.TabIndex = 16;
@@ -314,12 +328,13 @@
             // 
             // btnNew
             // 
+            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnNew.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
             this.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNew.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.Location = new System.Drawing.Point(896, 14);
+            this.btnNew.Location = new System.Drawing.Point(889, 31);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(129, 38);
             this.btnNew.TabIndex = 17;
@@ -329,8 +344,9 @@
             // 
             // txtSearch
             // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSearch.Location = new System.Drawing.Point(705, 274);
+            this.txtSearch.Location = new System.Drawing.Point(698, 285);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(534, 31);
             this.txtSearch.TabIndex = 16;
@@ -338,9 +354,10 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(607, 280);
+            this.label9.Location = new System.Drawing.Point(600, 291);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 22);
             this.label9.TabIndex = 16;
@@ -355,26 +372,15 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "label7";
             // 
-            // borrowBindingSource
-            // 
-            this.borrowBindingSource.DataSource = typeof(ForTesting.Borrow);
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataSource = typeof(ForTesting.Student);
-            // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataSource = typeof(ForTesting.Book);
-            // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1110, 14);
+            this.button2.Location = new System.Drawing.Point(1103, 31);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 38);
             this.button2.TabIndex = 19;
@@ -384,6 +390,7 @@
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button3.BackColor = System.Drawing.Color.Honeydew;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
@@ -400,6 +407,67 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.studentToolStripMenuItem,
+            this.settingsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1273, 24);
+            this.menuStrip1.TabIndex = 21;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // studentToolStripMenuItem
+            // 
+            this.studentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.studentToolStripMenuItem1,
+            this.bookToolStripMenuItem});
+            this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.studentToolStripMenuItem.Text = "Administration";
+            // 
+            // studentToolStripMenuItem1
+            // 
+            this.studentToolStripMenuItem1.Name = "studentToolStripMenuItem1";
+            this.studentToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.studentToolStripMenuItem1.Text = "Student";
+            this.studentToolStripMenuItem1.Click += new System.EventHandler(this.studentToolStripMenuItem1_Click);
+            // 
+            // bookToolStripMenuItem
+            // 
+            this.bookToolStripMenuItem.Name = "bookToolStripMenuItem";
+            this.bookToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bookToolStripMenuItem.Text = "Book";
+            this.bookToolStripMenuItem.Click += new System.EventHandler(this.bookToolStripMenuItem_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rfidSettingsToolStripMenuItem});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // rfidSettingsToolStripMenuItem
+            // 
+            this.rfidSettingsToolStripMenuItem.Name = "rfidSettingsToolStripMenuItem";
+            this.rfidSettingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rfidSettingsToolStripMenuItem.Text = "Rfid Settings";
+            this.rfidSettingsToolStripMenuItem.Click += new System.EventHandler(this.rfidSettingsToolStripMenuItem_Click);
+            // 
+            // borrowBindingSource
+            // 
+            this.borrowBindingSource.DataSource = typeof(ForTesting.Borrow);
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(ForTesting.Student);
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(ForTesting.Book);
+            // 
             // BorrowControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,14 +483,19 @@
             this.Controls.Add(this.panelReturn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panelBorrow);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "BorrowControl";
-            this.Text = "BarrowControl";
+            this.Text = "m";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BorrowControl_FormClosed);
             this.Load += new System.EventHandler(this.BarrowControl_Load);
             this.panelBorrow.ResumeLayout(false);
             this.panelBorrow.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelReturn.ResumeLayout(false);
             this.panelReturn.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.borrowBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
@@ -465,5 +538,11 @@
         private System.Windows.Forms.TextBox txtBarrowId;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem bookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rfidSettingsToolStripMenuItem;
     }
 }

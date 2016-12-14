@@ -59,11 +59,19 @@ namespace ForTesting
 
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
-            if (serialPort1.IsOpen)
+            try
             {
-                serialPort1.Close();
-                listBox1.Items.Add("Connection Closed");
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Close();
+                    listBox1.Items.Add("Connection Closed");
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
         }
 
         private void RFIDController_FormClosed(object sender, FormClosedEventArgs e)

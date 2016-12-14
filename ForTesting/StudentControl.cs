@@ -113,6 +113,8 @@ namespace ForTesting
                         lms.Student.Remove(studentBindingSource.Current as Student);
                         studentBindingSource.RemoveCurrent();
                         lms.SaveChanges();
+                        MessageBox.Show("Student Deleted");
+                        studentBindingSource.DataSource = lms.Student.ToList();
                     }
                     catch (Exception ex)
                     {
@@ -140,7 +142,7 @@ namespace ForTesting
                 try
                 {
                     var query = from o in studentBindingSource.DataSource as List<Student>
-                                where o.name.Contains(txtSearch.Text) || o.scode.Contains(txtSearch.Text)
+                                where o.name.Contains(txtSearch.Text) || o.scode.Contains(txtSearch.Text) || o.surname.Contains(txtSurname.Text)
                                 select o;
                     dataGridView1.DataSource = query.ToList();
                 }
